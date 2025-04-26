@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chatbot-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .chat-window {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .message {
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            clear: both;
+        }
+        .user-message {
+            background-color: #e2f7ff;
+            text-align: right;
+            float: right;
+        }
+        .bot-message {
+            background-color: #f0f0f0;
+            text-align: left;
+            float: left;
+        }
+        .input-area {
+            display: flex;
+        }
+        .input-area input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .input-area button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NBA Chatbot</h1>
+        <nav>
+            <a href="index.html">News</a> | 
+            <a href="playoff-bracket.html">Playoff Bracket</a> |
+            <a href="nba-draft.html">NBA Draft</a> |
+            <a href="league-leaders.html">League Leaders</a> |
+            <a href="nba-trades.html">2025 Trades</a> |
+            <a href="chatbot.html">Chatbot</a>
+        </nav>
+    </header>
+
+    <main class="chatbot-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="message bot-message">Hello! I'm a simple NBA chatbot. Ask me anything!</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NBA News Aggregator | <a href="https://www.espn.com" target="_blank">ESPN</a></p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const inputField = document.getElementById('messageInput');
+            const chatWindow = document.getElementById('chatWindow');
+            const messageText = inputField.value;
+
+            if (messageText.trim() === '') return;
+
+            // Display user message
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('message', 'user-message');
+            userMessageDiv.textContent = messageText;
+            chatWindow.appendChild(userMessageDiv);
+
+            // Get bot response (predefined)
+            const botResponse = getBotResponse(messageText);
+
+            // Display bot message
+            const botMessageDiv = document.createElement('div');
+            botMessageDiv.classList.add('message', 'bot-message');
+            botMessageDiv.textContent = botResponse;
+            chatWindow.appendChild(botMessageDiv);
+
+            // Clear input field
+            inputField.value = '';
+
+            // Scroll to bottom of chat window
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            message = message.toLowerCase();
+            if (message.includes('mvp')) {
+                return "Nikola Jokic is a strong MVP candidate this year.";
+            } else if (message.includes('lakers')) {
+                return "The Lakers are always a team to watch out for.";
+            } else if (message.includes('playoffs')) {
+                return "The playoffs are shaping up to be very exciting!";
+            } else {
+                return "I'm sorry, I don't have information on that topic. Try asking about the MVP race, the Lakers, or the playoffs.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+[build]
+  command = "node scripts/nbaNewsFetcher.js && npm run build"
+  publish = "public"

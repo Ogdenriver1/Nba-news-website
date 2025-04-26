@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA League Leaders</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .leaders-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .leaders-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 30px; /* Space between tables */
+        }
+        .leaders-table th, .leaders-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .leaders-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .leaders-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .leaders-section-title {
+            font-size: 1.4em;
+            color: #007bff;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NBA League Leaders</h1>
+        <nav>
+            <a href="index.html">News</a> |
+            <a href="playoff-bracket.html">Playoff Bracket</a> |
+            <a href="nba-draft.html">NBA Draft</a> |
+            <a href="league-leaders.html">League Leaders</a> |
+            <a href="nba-trades.html">2025 Trades</a> |
+            <a href="nba-standings.html">Standings</a>
+        </nav>
+    </header>
+
+    <main class="leaders-container">
+        <h2 class="leaders-section-title">Points Per Game (PTS)</h2>
+        <table class="leaders-table">
+            <thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>PTS</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Shai Gilgeous-Alexander</td><td>OKC</td><td>32.7</td></tr>
+                <tr><td>2</td><td>Giannis Antetokounmpo</td><td>MIL</td><td>30.4</td></tr>
+                <tr><td>3</td><td>Nikola Jokic</td><td>DEN</td><td>29.8</td></tr>
+                <tr><td>4</td><td>Anthony Edwards</td><td>MIN</td><td>27.4</td></tr>
+                <tr><td>5</td><td>Jayson Tatum</td><td>BOS</td><td>26.8</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="leaders-section-title">Assists Per Game (AST)</h2>
+        <table class="leaders-table">
+            <thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>AST</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Trae Young</td><td>ATL</td><td>11.6</td></tr>
+                <tr><td>2</td><td>Nikola Jokic</td><td>DEN</td><td>10.3</td></tr>
+                <tr><td>3</td><td>Tyrese Haliburton</td><td>IND</td><td>9.2</td></tr>
+                <tr><td>4</td><td>Cade Cunningham</td><td>DET</td><td>9.1</td></tr>
+                <tr><td>5</td><td>James Harden</td><td>LAC</td><td>8.7</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="leaders-section-title">3-Pointers Made (3PM)</h2>
+         <table class="leaders-table">
+            <thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>3PM</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Stephen Curry</td><td>GS</td><td>4.4</td></tr>
+                <tr><td>2</td><td>Anthony Edwards</td><td>MIN</td><td>4.0</td></tr>
+                <tr><td>3</td><td>Malik Beasley</td><td>DET</td><td>3.9</td></tr>
+                <tr><td>3</td><td>Brandon Miller</td><td>CHA</td><td>3.9</td></tr>
+                <tr><td>5</td><td>LaMelo Ball</td><td>CHA</td><td>3.8</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="leaders-section-title">Rebounds Per Game (REB)</h2>
+        <table class="leaders-table">
+             <thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>REB</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Domantas Sabonis</td><td>SAC</td><td>13.9</td></tr>
+                <tr><td>2</td><td>Nikola Jokic</td><td>DEN</td><td>12.8</td></tr>
+                <tr><td>2</td><td>Karl-Anthony Towns</td><td>NY</td><td>12.8</td></tr>
+                <tr><td>4</td><td>Ivica Zubac</td><td>LAC</td><td>12.6</td></tr>
+                <tr><td>5</td><td>Walker Kessler</td><td>UTAH</td><td>12.2</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="leaders-section-title">Blocks Per Game (BLK)</h2>
+        <table class="leaders-table">
+            <thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>BLK</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Walker Kessler</td><td>UTAH</td><td>2.4</td></tr>
+                <tr><td>2</td><td>Myles Turner</td><td>IND</td><td>2.0</td></tr>
+                <tr><td>3</td><td>Brook Lopez</td><td>MIL</td><td>1.9</td></tr>
+                <tr><td>4</td><td>Donovan Clingan</td><td>POR</td><td>1.6</td></tr>
+                <tr><td>4</td><td>Evan Mobley</td><td>CLE</td><td>1.6</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="leaders-section-title">Steals Per Game (STL)</h2>
+        <table class="leaders-table">
+            <thead><tr><th>Rank</th><th>Player</th><th>Team</th><th>STL</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Dyson Daniels</td><td>ATL</td><td>3.0</td></tr>
+                <tr><td>2</td><td>Nikola Jokic</td><td>DEN</td><td>1.8</td></tr>
+                <tr><td>2</td><td>Cason Wallace</td><td>OKC</td><td>1.8</td></tr>
+                <tr><td>4</td><td>Shai Gilgeous-Alexander</td><td>OKC</td><td>1.7</td></tr>
+                <tr><td>4</td><td>Kris Dunn</td><td>LAC</td><td>1.7</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NBA News Aggregator | <a href="https://www.espn.com" target="_blank">ESPN</a></p>
+    </footer>
+</body>
+</html>
